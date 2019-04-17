@@ -1,2 +1,2 @@
 # indra20190417
-Trainamento de Git
+Treinamento de Git
