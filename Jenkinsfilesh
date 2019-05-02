@@ -22,6 +22,7 @@ pipeline{
                 python -m Pyautomators -f json -o .//hello-submarino.json
                 '''
                
+            }
         }
     }
 }
