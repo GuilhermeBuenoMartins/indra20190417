@@ -5,7 +5,7 @@ pipeline{
         stage ("Build"){
             steps{
                 echo 'Building'
-                git 'https://github.com/GuilhermeBuenoMartins/indra20190417.git'
+                git 'https://github.com/GuilhermeBuenoMartins/indra20190417'
             }
         }
         stage ("Test"){
@@ -16,10 +16,12 @@ pipeline{
                 pip install virtualenv
                 virtualenv env
                 env//s//activate
-                
                 '''
-
-            }
+                sh '''
+                cd submarino
+                python -m Pyautomators -f json -o .//hello-submarino.json
+                '''
+               
         }
     }
 }
