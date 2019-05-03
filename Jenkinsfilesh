@@ -11,10 +11,8 @@ pipeline{
         stage ("Envoinment"){
             steps{
                 echo 'Setting up envoinment'
+                sh 'env/Script/activete'
                 sh 'cd ./submarino'
-                sh 'su apt-get upgrade'
-                sh 'su apt-get install Pyautomators'
-                '''
             }
         }
         stage ("Deploy"){
