@@ -12,6 +12,7 @@ pipeline{
             steps{
                 echo 'Setting up envoinment'
                 sh 'cd submarino'
+                sh 'python -m Pyautomators'
             }
         }
     }
