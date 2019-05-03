@@ -12,7 +12,7 @@ pipeline{
             steps{
                 echo 'Setting up envoinment'
                 sh 'cd ..'
-                sh 'env/bin/activate'
+                sh '/var/jenkins_home/jobs/env/bin/activate'
                 sh 'cd ./test-pipe/submarino'
             }
         }
