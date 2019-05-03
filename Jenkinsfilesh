@@ -8,8 +8,9 @@ pipeline{
                 git 'https://github.com/GuilhermeBuenoMartins/indra20190417'
             }
         }
-        stage ("Test"){
+        stage ("Envoinment"){
             steps{
+                echo 'Setting up envoinment'
                 sh '''
                 pip install python-jenkins
                 python -m pip install --upgrade pip
