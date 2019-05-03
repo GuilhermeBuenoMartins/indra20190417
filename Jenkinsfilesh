@@ -11,7 +11,7 @@ pipeline{
         stage ("Envoinment"){
             steps{
                 echo 'Setting up envoinment'
-                
+                sh 'env/bin/activate'
                 sh 'cd submarino'
             }
         }
