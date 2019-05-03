@@ -19,7 +19,7 @@ pipeline{
         stage ("Deploy"){
             steps{
                 sh '''
-                python -m Pyautomators -f json -o .//hello-submarino.json
+                python -m Pyautomators -f json -o ./hello-submarino.json
                 '''
             }
         }
