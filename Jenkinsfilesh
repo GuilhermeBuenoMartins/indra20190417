@@ -12,13 +12,6 @@ pipeline{
             steps{
                 echo 'Setting up envoinment'
                 sh '''
-                pip install python-jenkins
-                python -m pip install --upgrade pip
-                pip install virtualenv
-                virtualenv env
-                env//Scripts//activate
-                '''
-                sh '''
                 cd Submarino
                 '''
             }
