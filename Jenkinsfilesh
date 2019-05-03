@@ -11,9 +11,9 @@ pipeline{
         stage ("Envoinment"){
             steps{
                 echo 'Setting up envoinment'
-                sh 'virtualenv env'
+                sh 'cd /var/jenkins_home/jobs/'
                 sh 'env/bin/activate'
-                sh 'cd submarino'
+                sh 'cd /var/jenkins_home/workspace/test-pipe@tmp/submarino'
             }
         }
         stage ("Deploy"){
