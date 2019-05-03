@@ -15,10 +15,5 @@ pipeline{
                 sh 'source env/bin/activate'
             }
         }
-        stage ("Deploy"){
-            steps{
-                
-            }
-        }
     }
 }
