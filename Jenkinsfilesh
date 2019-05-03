@@ -11,10 +11,22 @@ pipeline{
         stage ("Test"){
             steps{
                 sh '''
-                python -m Pyautomators -f json -o .//hello-submarino.json
+                pip install python-jenkins
+                python -m pip install --upgrade pip
+                pip install virtualenv
+                virtualenv env
+                env//Scripts//activate
                 '''
-               
+                sh '''
+                cd Submarino
+                '''
             }
         }
+        stage ("Deploy"){
+            steps{
+                sh '''
+                python -m Pyautomators -f json -o .//hello-submarino.json
+                '''
+            }
     }
 }
