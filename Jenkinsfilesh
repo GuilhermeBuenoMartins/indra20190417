@@ -13,7 +13,7 @@ pipeline{
                 echo 'Setting up envoinment'
                 sh 'cd ..'
                 sh '/var/jenkins_home/jobs/env/bin/activate'
-                sh 'cd ./test-pipe/submarino'
+                sh 'cd submarino'
             }
         }
         stage ("Deploy"){
