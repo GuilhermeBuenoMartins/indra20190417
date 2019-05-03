@@ -11,8 +11,7 @@ pipeline{
         stage ("Envoinment"){
             steps{
                 echo 'Setting up envoinment'
-                sh 'cd ..'
-                sh '/var/jenkins_home/jobs/env/bin/activate'
+                
                 sh 'cd submarino'
             }
         }
