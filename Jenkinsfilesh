@@ -11,7 +11,6 @@ pipeline{
         stage ("Test"){
             steps{
                 sh '''
-                cd submarino
                 python -m Pyautomators -f json -o .//hello-submarino.json
                 '''
                
