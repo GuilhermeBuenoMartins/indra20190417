@@ -13,14 +13,11 @@ pipeline{
                 echo 'Setting up envoinment'
                 sh 'cd ..'
                 sh 'source env/bin/activate'
-                sh 'cd /var/jenkins_home/workspace/test-pipe@tmp/submarino'
             }
         }
         stage ("Deploy"){
             steps{
-                sh '''
-                python -m Pyautomators -f json -o ./hello-submarino.json
-                '''
+                
             }
         }
     }
